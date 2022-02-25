@@ -1,0 +1,44 @@
+table{
+	margin: auto;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 30px;
+	border: 0px solid black;
+	background-color: black;
+}
+
+.r{
+    border-right-width: 6px;
+}
+
+.l{
+    border-left-width: 6px;
+}
+.t{
+    border-top-width: 6px;
+}
+.b{
+    border-bottom-width: 6px;
+}
+
+
+#player{
+	position: relative;
+	width: 0px;
+	height: 0px;
+	outline: 12px solid blue;
+	animation: pulseplayer 2s ease-in-out 1s infinite alternate;
+}
+
+@keyframes pulseplayer {
+	0% {outline-width: 12px;}
+	100% {outline-width: 18px;}
+}
+
+#timer,#win, #seed{
+	width: fit-content;
+	margin: auto;
+	font-size: 50px;
+}

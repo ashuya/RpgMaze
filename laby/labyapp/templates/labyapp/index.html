@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dark Maze</title>
+    <link rel="stylesheet" href="{% static 'labyapp/style.css' %}">
+</head>
+<body>
+    <div id="player"></div>
+    <table id="maze">
+        {% for tr in labyrint %}
+            <tr>
+            {% for td in tr %}
+                <td class="{% for c in td %}{{ c }} {% endfor %}">
+                </td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <div id="timer"></div>
+    <div id="win"></div>
+    <p id="seed">seed: {{ seed }}</p>
+<script src="{% static 'labyapp/index.js' %}"></script>
+</body>
+</html>
