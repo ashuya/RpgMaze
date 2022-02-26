@@ -18,9 +18,10 @@
             </tr>
         {% endfor %}
     </table>
-    <div id="timer"></div>
-    <div id="win"></div>
-    <p id="seed">seed: {{ seed }}</p>
+    <div class="helptext" id="timer"></div>
+    <div class="helptext" id="win"></div>
+    <div class="helptext">управление: wasd или hjkl</div>
+    <p class="helptext">seed: {{ seed }}</p>
 <script src="{% static 'labyapp/index.js' %}"></script>
 </body>
 </html>
