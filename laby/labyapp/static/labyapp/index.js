@@ -80,6 +80,11 @@ timerId = setInterval(function(){
 function win(){
 	winMessage.innerHTML = 'Win!';
 	clearInterval(timerId);
+    for (var x = 0; x < table[0].length; x++)
+        for (var y = 0; y < table.length; y++)
+            if (x+y!=0 && x+y!=table[0].length+table.lenth-2 && 
+                table[y][x].style.backgroundColor != "white")
+                table[y][x].style.backgroundColor = "lightgray";
 }
 
 function formatTime(time) {

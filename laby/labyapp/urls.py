@@ -18,6 +18,7 @@ from . import views
 
 urlpatterns = [
 		path('', views.index),
-		path('<int:width>/<int:height>', views.maze),
 		path('<int:seed>', views.maze),
+		path('<int:width>/<int:height>', views.maze),
+		path('<int:width>/<int:height>/<int:seed>', views.maze),
 		]
